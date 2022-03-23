@@ -1,0 +1,13 @@
+{% extends 'enroll/base.html' %}
+{% block content %}
+    <div class="row justify-content-evenly">
+        <div class="col-md-8">
+            <h4 class="text-center alert-primary">Update Student/User Info</h4>
+            <form method="POST"> {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" vlaue='Update' class="btn btn-success">
+                <a href="{% url 'addshow' %}" class="btn btn-info">Back to Home</a>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
